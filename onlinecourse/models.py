@@ -138,6 +138,6 @@ class Choice(models.Model):
 # One choice could belong to multiple submissions
 class Submission(models.Model):
     enrollment = models.ForeignKey('Enrollment', on_delete=models.CASCADE)
-    
-    # submissions = models.ForeignKey('Choice', on_delete=models.CASCADE)
+    choices = models.ForeignKey("Choice", on_delete=models.CASCADE)
+    submission_id = models.AutoField(primary_key=True)
 #    Other fields and methods you would like to design
