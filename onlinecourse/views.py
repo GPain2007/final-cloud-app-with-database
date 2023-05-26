@@ -115,7 +115,7 @@ def submit(request, course_id):
         payload = request.POST
         choices = payload.getlist('choices')
         user = User.objects.get(username='username')
-        course = Course.objects.get(pk=1)
+        course = Course.objects.get(pk=course_id)
         enrollment = Enrollment.objects.get(id=1, user=user, course=course)
         submission = Submission.objects.create(enrollment=enrollment)
         for choice_select in choices:
