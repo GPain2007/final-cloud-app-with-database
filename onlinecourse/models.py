@@ -139,5 +139,5 @@ class Choice(models.Model):
 class Submission(models.Model):
     enrollment = models.ForeignKey('Enrollment', on_delete=models.CASCADE)
     choices = models.ForeignKey("Choice", on_delete=models.CASCADE)
-    submission_id = models.AutoField(primary_key=True)
+    # submission_id = models.AutoField(primary_key=True)
 #    Other fields and methods you would like to design
